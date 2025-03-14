@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Landing Page</title>
+    <link rel="stylesheet" href="./output.css">
+    <script src="https://kit.fontawesome.com/ad37456720.js" crossorigin="anonymous"></script>
+</head>
+<body class="min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between bg-white shadow-lg relative lg:static">
+        <div class="logo-container px-6 py-3">
+            <a href="#" class="flex items-center gap-1">
+                <img src="./assets/asset 0.png" alt="..." class="size-12">
+                <span class="text-lg font-semibold">ToDesktop</span>
+            </a>
+        </div>
+        <div id="nav-menu-container" class="bg-white absolute top-full w-full px-8 py-3 hidden lg:static lg:flex lg:justify-center">
+            <div class="nav-menu lg:flex-1/3 lg:flex lg:justify-center lg:gap-10">
+                <ul class="flex flex-col gap-5 lg:flex-row lg:gap-10">
+                    <li><a href="#" class="text-xl font-semibold hover:bg-sky-300 block px-2 py-1 rounded-md lg:text-base lg:hover:bg-white lg:hover:text-[#3238f2]">Pricing</a></li>
+                    <li><a href="#" class="text-xl font-semibold hover:bg-sky-300 block px-2 py-1 rounded-md lg:text-base lg:hover:bg-white lg:hover:text-[#3238f2]">Docs</a></li>
+                    <li><a href="#" class="text-xl font-semibold hover:bg-sky-300 block px-2 py-1 rounded-md lg:text-base lg:hover:bg-white lg:hover:text-[#3238f2]">Changelogs</a></li>
+                    <li><a href="#" class="text-xl font-semibold hover:bg-sky-300 block px-2 py-1 rounded-md lg:text-base lg:hover:bg-white lg:hover:text-[#3238f2]">Blogs</a></li>
+                    <li><a href="#" class="text-xl font-semibold hover:bg-sky-300 block px-2 py-1 rounded-md lg:text-base lg:hover:bg-white lg:hover:text-[#3238f2]">Login</a></li>
+                </ul>
+            </div>
+            <div class="min-h-[1px] bg-gray-300 my-5 lg:hidden">
+            </div>
+            <div class="">
+                <button class="flex items-center gap-2 hover:bg-sky-300 px-2 py-1 rounded-md w-full lg:border lg:px-3 lg:py-2 lg:hover:border-[#a4a9b0] lg:hover:bg-white">
+                    <img src="./assets/asset 1.svg" alt="...">
+                    <span>Electron Developers</span>
+                    <span class="hidden lg:block"><i class="fa-solid fa-arrow-right-long"></i></span>
+                </button>
+            </div>
+        </div>
+        <div class="px-6 py-3">
+            <span id="bars" class="lg:hidden"><i class="fa-solid fa-bars fa-lg" onclick="handleNavMenu()"></i></span>
+            <span id="cross" class="hidden lg:hidden"><i class="fa-solid fa-xmark fa-lg" onclick="handleNavMenu()"></i></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+     <main class="min-h-screen bg-gradient-to-b from-purple-50 via-orange-50 to-transparent flex flex-col gap-10">
+        <div class="hero-container px-5 py-10 lg:flex lg:flex-col lg:items-center lg:text-center">
+            <div class="version-text flex items-center border border-[#ed731c] gap-2 w-fit rounded-lg px-3 py-1 mb-10 bg-[#fefce8] shadow-lg hover:shadow-xl hover:-translate-y-2 transition group">
+                <div class="dot size-2 rounded-full bg-yellow-400 border border-yellow-600"></div>
+                <p class="text-[#ca8a27]">v0.21.1: <span class="text-[#854d0e] font-semibold">Find-in-page bug fixes</span></p>
+                <i class="fa-solid fa-arrow-right-long text-[#ca8a27] group-hover:translate-x-1 transition duration-300"></i>
+            </div>
+            <div class="hidden lg:block mb-10">
+                <ul class="flex items-center gap-10">
+                    <li class="flex items-center gap-2">
+                        <i class="fa-regular fa-file-code text-gray-600"></i>
+                        <span class="text-gray-600">Code Optional</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-hand-back-fist text-gray-600"></i>
+                        <span class="text-gray-600">Drag & drop builder</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-laptop text-gray-600"></i>
+                        <span class="text-gray-600">Windows, Mac, Linux</span>
+                    </li>
+                </ul>
+            </div>
+            <h1 class="text-4xl font-semibold text-[#1f2937] leading-snug mb-10 lg:text-6xl lg:font-bold lg:w-[40%] lg:leading-tight">Web app to desktop app in minutes</h1>
+            <p class="text-xl mb-10 text-[#1f2937] lg:text-2xl lg:w-[40%]">Take your web app codebase and transform it into a cross platform desktop app with native functionality.</p>
+            <div class="btn-container flex flex-col gap-5 lg:flex-row">
+                <button class="bg-[#3238f2] text-white rounded-md px-5 py-2 text-lg font-semibold shadow-lg hover:opacity-90">Download now</button>
+                <button class="bg-white border border-gray-400 hover:border-black rounded-md px-5 py-2 text-lg font-semibold shadow-lg">Read Docs</button>
+            </div>
+        </div>
+        <div id="company-lists" class="flex flex-col justify-center gap-5">
+            <div class="company-lists-header flex justify-center mb-10">
+                <img src="./assets/asset 2.svg" alt="..." class="translate-y-3">
+                <span class="text-xl font-semibold">APPS POWERED BY ToDESKTOP</span>
+                <img src="./assets/asset 2.svg" alt="..." class="translate-y-3 transform -scale-x-100">
+            </div>
+            <div class="company-lines flex flex-col gap-3 overflow-x-hidden lg:gap-5">
+                <div id="line1" class="flex gap-3 w-screen -translate-x-48 lg:gap-5">
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 3.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Unbounce1</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 4.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">LifeAt</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 5.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Convy</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 6.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Morgen</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 7.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Campsite</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 8.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Rise</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 9.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">ClickUp</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 10.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Notion</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 11.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Sunsama</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 12.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Beeper</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 13.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Cal</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 14.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Webstudio</span>
+                    </div>
+                </div>
+                <div id="line2" class="flex gap-3 w-screen -translate-x-36">
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 15.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Unbounce</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 16.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Guesty</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 17.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Omnify</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 18.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Winger</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 19.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Plix</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 20.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Moises</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 21.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Basedash</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 22.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Cursor</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 23.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Linear</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 24.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Voiceflow</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 25.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Kitemaker</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 26.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Cron</span>
+                    </div>
+                </div>
+                <div id="line3" class="flex gap-3 w-screen -translate-x-48 lg:hidden">
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 15.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Unbounce1</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 16.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Unbounce1</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 27.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Pongs</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 3.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Unbounce</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 4.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Revify</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 5.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Campspot</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 12.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Unbounce1</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 13.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Unbounce1</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 14.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Unbounce1</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 24.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Unbounce1</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 25.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Unbounce1</span>
+                    </div>
+                    <div class="flex flex-col items-center pt-2 gap-3 border bg-white rounded-md min-w-24 min-h-24 lg:min-w-32 lg:min-h-32">
+                        <img src="./assets/asset 26.png" alt="..." class="size-12 lg:size-18">
+                        <span class="font-semibold lg:text-xl">Unbounce1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </main>
+</body>
+<script src="./script.js"></script>
+</html>
