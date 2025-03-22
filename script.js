@@ -1,5 +1,6 @@
-const initialLTRShift = -48 * 4;
-const initialRTLShift = 36 * 4;
+function getScreenSize(){
+    return window.innerHeight < 768 ? 0.3 : 0.8;
+}
 
 function handleNavMenu(){
     const bars = document.getElementById('bars');
@@ -43,3 +44,4 @@ function setUpIntersectionObserver(element, isLTR, speed){
 setUpIntersectionObserver(document.getElementById('line1'), true, 0.15);
 setUpIntersectionObserver(document.getElementById('line2'), false, 0.15);
 setUpIntersectionObserver(document.getElementById('line3'), true, 0.15);
+setUpIntersectionObserver(document.getElementById('line4'), false, getScreenSize());
